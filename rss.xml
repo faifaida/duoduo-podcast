@@ -15,7 +15,62 @@ An unfinished experiment of redesigning life. Using AI, creativity and real-worl
     <itunes:subtitle>人生重构实验者 · AI × 人生设计 × 创造</itunes:subtitle>
     <itunes:author>多多</itunes:author>
     <itunes:summary><![CDATA[一个正在重构人生的人，通过 AI、旅行、创造和真实商业实验，记录自己如何设计一种想要的生活。]]></itunes:summary>
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+     xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+     xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>多多的未完成实验</title>
+    <link>https://faifaida.github.io/duoduo-podcast/</link>
+    <language>zh-CN</language>
+    <copyright>© 2026 多多</copyright>
+    <description><![CDATA[如果人生也是一家公司，你会如何重新整理自己的资产？
+
+我把自己的经历、知识、兴趣、关系和失败，重新放回桌面。从金融行业到辞职旅行，从冲浪到家族文旅创业，从 Notion 笔记到 AI 个人公司。这个播客记录一个人的人生重构实验：如何用 AI 激活旧知识，用创造连接世界，用自己的经历设计一种想要的生活。
+
+An unfinished experiment of redesigning life. Using AI, creativity and real-world experiences, I explore how we can transform our knowledge, stories and interests into a meaningful life and personal company.]]></description>
+    <itunes:subtitle>人生重构实验者 · AI × 人生设计 × 创造</itunes:subtitle>
+    <itunes:author>多多</itunes:author>
+    <itunes:summary><![CDATA[一个正在重构人生的人，通过 AI、旅行、创造和真实商业实验，记录自己如何设计一种想要的生活。]]></itunes:summary>
     <itunes:owner>
+      <itunes:name>多多</itunes:name>
+      <itunes:email>939526417@qq.com</itunes:email>
+    </itunes:owner>
+    <itunes:image href="https://faifaida.github.io/duoduo-podcast/cover.jpg"/>
+    <itunes:category text="Society &amp; Culture"/>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:type>episodic</itunes:type>
+
+        <item>
+      <title>01｜26岁，我开始用AI重新设计我的人生</title>
+      <itunes:title>01｜26岁，我开始用AI重新设计我的人生</itunes:title>
+      <description><![CDATA[这期节目里，你听到的两位对谈者都不是我，而是 AI。
+我把过去几年关于 Notion、Obsidian、知识管理和个人公司的资料交给 NotebookLM，让它把一堆沉睡的笔记变成了一场真正能听进去的讨论。
+这不是一期普通的 AI 工具测评，而是我的第一个个人公司实验：一个人能不能把过去积累的知识、经历和失败重新激活，让它们开始产生内容、判断和价值？
+26岁，我不想再继续收藏答案。我想开始利用已经拥有的一切，重新设计我的工作、生活和未来。
+本期由 AI 生成与演绎，选题、资料来源和最终判断由多多负责。
+时间轴
+00:00 为什么旧知识需要被重新激活
+01:30 知识学习分3步
+04:10 Notion 与 Obsidian 的不同角色
+07:20 从知识收藏转向知识加工
+10:35 AI 如何成为个人知识系统的放大器
+14:05 把经历、兴趣与失败变成个人公司资产
+18:00 建立低摩擦的内容生产流水线
+21:35 AI 可以承担什么，人必须保留什么
+23:35 第一个个人公司实验的下一步]]></description>
+      <itunes:author>多多</itunes:author>
+      <itunes:duration>1480</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:image href="https://faifaida.github.io/duoduo-podcast/cover.jpg"/>
+      <guid isPermaLink="false">https://www.xiaoyuzhoufm.com/episode/6a5a40926356eb2d9be445c0</guid>
+      <pubDate>Fri, 17 Jul 2026 14:50:16 +0000</pubDate>
+      <enclosure url="https://media.xyzcdn.net/6a5a306305d4bfbabc3ea16b/lulgoHVafB1iXo4-j7eF1Kn64sII.m4a" type="audio/x-m4a" length="0"/>
+    </item>
+
+  </channel>
+</rss>
+   <itunes:owner>
       <itunes:name>多多</itunes:name>
       <itunes:email>939526417@qq.com</itunes:email>
     </itunes:owner>
