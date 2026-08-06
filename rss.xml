@@ -11,6 +11,33 @@
     <image href="https://faifaida.github.io/duoduo-podcast/cover.jpg"/>
     <itunes:image href="https://faifaida.github.io/duoduo-podcast/cover.jpg"/>
   <item>
+    <title>003｜我把 AI 招进来以后，先多了一份管理 AI 的工作</title>
+    <description><![CDATA[那天夜里，Mac 开着，新买的 Windows 也开着。一个屏幕 ChatGPT，一个 WorkBuddy，一个 Obsidian，NotebookLM 又打不开。
+我在那儿切窗口、复制、粘贴、解释背景、改 prompt、检查它到底有没有理解错。然后我停下来问自己：我到底在干嘛？
+我不是为了让 AI 替我工作吗，怎么现在变成我在给六个 AI 做 onboarding，给它们搬家，写交接，还要安抚它们——这个文件不是那个版本，那个多多已经过期了。
+这期讲的不是工具测评。是我发现最乱的不是文件，是每一个 AI 里面都住着一个不太一样的我。而 AI 特别会把零散的东西连成故事，人类又特别爱故事。
+所以我给自己重排了一遍：谁负责存，谁负责想，谁负责读原文，谁负责批量干活，谁现在根本不该常驻。然后接下来七天，不新增任何工具。
+—— 时间轴 ——
+00:00｜深夜两台电脑六个 AI，我到底在干嘛
+01:51｜工具是我自己一个个加的，不能全怪它们
+02:34｜工具焦虑常来自三个混淆
+03:23｜每一个 AI 里面，都有一个不太一样的我
+04:00｜我怕的不是它不懂我，是它懂错了还说得特别像真的
+04:49｜先别问 Notion 还是 Obsidian，先问这件事属于哪一层
+05:48｜每一层只能有一个负责人，不然不是工具吵，是版本吵
+06:16｜Notion 先做正式知识库——注意，是"先"
+06:50｜Obsidian 先做工作台
+07:42｜ChatGPT / NotebookLM / Codex，一句话分工
+08:51｜激活旧知识，我要的其实是七种东西
+09:43｜上下文包不是人格判决书，是能被现实打脸的工作假设
+10:06｜真正要停掉的不是某个工具，是"我又在准备"
+11:25｜接下来七天：不新增工具
+11:59｜七天以后，什么才算有效]]></description>
+    <enclosure url="https://media.xyzcdn.net/6a5a306305d4bfbabc3ea16b/luL2DmVw6P2V0Pyl4AybovGH79Jg.m4a" type="audio/x-m4a"/>
+    <guid isPermaLink="false">https://www.xiaoyuzhoufm.com/episode/6a73b732ab3a91c24a107b6a</guid>
+    <pubDate>Wed, 05 Aug 2026 22:23:46 +0000</pubDate>
+  </item>
+  <item>
     <title>02｜人生不该每次重启</title>
     <description><![CDATA[我好像每隔几个月，就会重新设计一次自己的人生。
 从金融、旅行、冲浪，到文旅、青旅、泳衣、纹身和 AI，我并不是没有做过事。但当旧项目停止、新兴趣出现，我还是很容易觉得自己又回到了起点。
