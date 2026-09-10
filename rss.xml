@@ -7,6 +7,10 @@
     <description>可持续流浪 —— 一档关于用 AI 重新设计人生的播客。</description>
     <language>zh-CN</language>
     <itunes:author>多多</itunes:author>
+    <itunes:owner>
+      <itunes:name>多多</itunes:name>
+      <itunes:email>fayezang28@gmail.com</itunes:email>
+    </itunes:owner>
     <itunes:explicit>false</itunes:explicit>
     <image href="https://faifaida.github.io/duoduo-podcast/cover.jpg"/>
     <itunes:image href="https://faifaida.github.io/duoduo-podcast/cover.jpg"/>
