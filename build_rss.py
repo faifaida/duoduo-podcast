@@ -131,6 +131,10 @@ def build(eps):
     <description>{esc(SHOW_DESC)}</description>
     <language>zh-CN</language>
     <itunes:author>多多</itunes:author>
+    <itunes:owner>
+      <itunes:name>多多</itunes:name>
+      <itunes:email>fayezang28@gmail.com</itunes:email>
+    </itunes:owner>
     <itunes:explicit>false</itunes:explicit>
     <image href="{COVER}"/>
     <itunes:image href="{COVER}"/>
