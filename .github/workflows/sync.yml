@@ -1,0 +1,35 @@
+name: Sync Podcast RSS (cloud)
+
+# 云端定时同步：小宇宙 -> rss.xml -> GitHub Pages
+# Apple Podcasts / 网易云 / Spotify 自动抓取此 RSS，无需本机参与。
+on:
+  schedule:
+    - cron: "23 */6 * * *"      # 每 6 小时一次
+  workflow_dispatch: {}         # 也可在 Actions 页面手动点 Run workflow 立即同步
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Build RSS from 小宇宙
+        run: python build_rss.py
+      - name: Commit if changed
+        run: |
+          if git diff --quiet rss.xml; then
+            echo "rss.xml unchanged - no new episode"
+          else
+            git config user.email "sync-bot@duoduo.ai"
+            git config user.name "duoduo-sync-bot"
+            git add rss.xml
+            git commit -m "chore: auto-sync rss $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+            git push
+            echo "pushed new rss.xml"
+          fi
