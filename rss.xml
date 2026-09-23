@@ -15,6 +15,50 @@
     <image href="https://faifaida.github.io/duoduo-podcast/cover.jpg"/>
     <itunes:image href="https://faifaida.github.io/duoduo-podcast/cover.jpg"/>
   <item>
+    <title>15｜先别急着宣布你的毕生事业，你不是缺 niche，你缺一个愿意解决很多年的大问题「是方向，还是自我感动？」</title>
+    <description><![CDATA[Dan Koe 说，真正的 life's work 不是坐下来找到一个完美使命，而是先写出你现在想解决的大问题，把第一版放出去，让经验、失败和反馈慢慢把它显出来。
+但这也很危险。它允许一个兴趣很多的人，不必先把自己塞进一个狭窄 niche；可它也制造另一种陷阱：每个人都开始给自己找一个宏大世界问题，仿佛普通工作不够有意义，仿佛事业必须改变人类才值得做。
+这一期，我们聊：什么问题值得追很多年？一个问题怎样从一句漂亮话变成现实任务？以及——我们能不能先认真做一件小事，不急着宣布这就是毕生事业。
+时间轴（按实际成片时长比例，concat 后已用 seg_spans 校准）
+* 00:00 多多本人实录：为什么 life's work 特别容易让人上头
+* 00:50 大问题的方向价值和「身份奖励」
+* 05:10 niche、长期坐标和 offer 的区别
+* 09:20 什么问题值得追很多年
+* 13:40 热情为什么要经过无聊
+* 16:40 Anti-vision 是设计边界，不是敌人名单
+* 20:10 大问题怎样落到今天下午
+* 23:10 多多的 digestion：认真追问，不急着宣布终身身份
+* 25:10 约 2 分钟 peaceful lofi
+Show Notes
+Dan Koe 认为，life's work 围绕一个长期的大问题展开；这个问题可以来自自己正在解决的人生问题，并通过第一版内容、项目、经验和反馈逐渐显现。Anti-vision 和 value code 则帮助创作者明确自己想远离的生活与需要培养的价值。
+这一期继续讨论：
+* 宏大使命为什么会提前提供「有使命」的身份奖励；
+* niche、life's work 和 offer 为什么不是一回事；
+* 长期问题需要哪些现实证据；
+* 热情为什么要经过困难和无聊；
+* anti-vision 如何从群体敌意变成设计约束；
+* 一个大问题怎样落到现实项目、证据和作品。
+Reference
+[Dan Koe 原意]
+* 创作者应围绕一个值得长期解决的大问题，建立 body of work。
+* 大问题可以从自己的现实问题开始，通过第一版和经验逐渐清晰。
+* vision、anti-vision 和 value code 帮助形成品牌方向和 tribe。
+[多多的 digestion]
+* 长期问题可以连接变化，但不需要过早宣布终身使命。
+* niche 是入口，不是身份监狱；offer 应比内容和人生问题更具体。
+* anti-vision 应描述不想产生的结构，而不是鄙视另一群人。
+* 大问题必须落到项目、证据和作品。
+* 愿景课程容易让人提前获得「有使命」的身份奖励。
+* 长期问题的关键证据是重复、代价、可分解、他人需求和经历无聊后的回返。
+标签
+#lifeswork #niche #个人公司 #DanKoe #创作 #长期主义 #anti-vision #自我感动
+听后一想
+有哪一个问题，你已经换过很多工作、地点或身份，却还是会反复回到它？]]></description>
+    <enclosure url="https://media.xyzcdn.net/6a5a306305d4bfbabc3ea16b/llCVHoZ3LnmL-qqozujEDibr0oqr.m4a" type="audio/x-m4a"/>
+    <guid isPermaLink="false">https://www.xiaoyuzhoufm.com/episode/6a9a5b97a0210c197dcd5743</guid>
+    <pubDate>Wed, 23 Sep 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
     <title>14｜用户不为"变好"付费，只为看得见的结果付费「当承诺变成可验证的数字」</title>
     <description><![CDATA[油管一人公司大神Dan Koe 说，人不会为"变好"付钱，只会为一个具体结果付钱。
 这句话我第一反应是同意——太多产品写着"成为更好的自己""找回内在力量"，可你花完钱，是多了一套 PDF，还是真的多了一份收入？
@@ -568,27 +612,6 @@ Reference
     <enclosure url="https://media.xyzcdn.net/6a5a306305d4bfbabc3ea16b/ltfKlDqKsjhCSRQhDBXsz_8RIUW9.m4a" type="audio/x-m4a"/>
     <guid isPermaLink="false">https://www.xiaoyuzhoufm.com/episode/6a6c245fb581962ce2be58bb</guid>
     <pubDate>Fri, 31 Jul 2026 04:31:50 +0000</pubDate>
-  </item>
-  <item>
-    <title>01｜26岁，我开始用AI重新设计我的人生</title>
-    <description><![CDATA[这期节目里，你听到的两位对谈者都不是我，而是 AI。
-我把过去几年关于 Notion、Obsidian、知识管理和个人公司的资料交给 NotebookLM，让它把一堆沉睡的笔记变成了一场真正能听进去的讨论。
-这不是一期普通的 AI 工具测评，而是我的第一个个人公司实验：一个人能不能把过去积累的知识、经历和失败重新激活，让它们开始产生内容、判断和价值？
-26岁，我不想再继续收藏答案。我想开始利用已经拥有的一切，重新设计我的工作、生活和未来。
-本期由 AI 生成与演绎，选题、资料来源和最终判断由多多负责。
-时间轴
-00:00 为什么旧知识需要被重新激活
-01:30 知识学习分3步
-04:10 Notion 与 Obsidian 的不同角色
-07:20 从知识收藏转向知识加工
-10:35 AI 如何成为个人知识系统的放大器
-14:05 把经历、兴趣与失败变成个人公司资产
-18:00 建立低摩擦的内容生产流水线
-21:35 AI 可以承担什么，人必须保留什么
-23:35 第一个个人公司实验的下一步]]></description>
-    <enclosure url="https://media.xyzcdn.net/6a5a306305d4bfbabc3ea16b/lulgoHVafB1iXo4-j7eF1Kn64sII.m4a" type="audio/x-m4a"/>
-    <guid isPermaLink="false">https://www.xiaoyuzhoufm.com/episode/6a5a40926356eb2d9be445c0</guid>
-    <pubDate>Fri, 17 Jul 2026 14:50:16 +0000</pubDate>
   </item>
   </channel>
 </rss>
