@@ -16,7 +16,7 @@ disable-model-invocation: false
 
 ## 0. 什么时候用本 skill
 
-- 输入是**真实录音文件**（m4a / wav / pcm），单人口播或双人对谈，需要剪成播客成片。
+- 输入是**真实录音文件**（wav / mp3 / m4a / mov / 甚至裸 pcm 都行），单人口播或双人对谈，需要剪成播客成片。每次给的音频格式不固定，第 0 步会统一转成工程母带。
 - 需要：去 BGM/环境噪音、去口癖和长停顿、统一全程音量、接一段疗愈结尾、出可点击时间轴与发布文案。
 - **不做** TTS voice 生成（那是 `duo-podcast-studio` 的事）。两类 skill 各管各的，不要混用。
 
@@ -24,7 +24,7 @@ disable-model-invocation: false
 
 | 步 | 做的事 | 脚本 |
 |----|--------|------|
-| 0 | 源预处理：录音 → 44.1k mono wav（或保留 pcm） | `references/01_prep_source.py` |
+| 0 | 源预处理：任意原始录音（wav/mp3/m4a/mov/pcm）→ 44.1k mono wav 工程母带 `pod_src.wav` | `references/01_prep_source.py` |
 | 1 | （可选）AI 人声分离：抽 Vocals，削弱 BGM/环境音 ~38% | `references/02_separate_vocals.md`（外部工具 UVR/Demucs） |
 | 2 | 转写：whisper / mlx-audio，词级时间戳 → `pod_segments.json` | `references/03_transcribe.py` |
 | 3 | 标注：口癖/长停顿/口误检测 → 标注稿 + 候选切点 `pod_cuts.json` | `references/04_detect_cuts.py` |
@@ -37,7 +37,7 @@ disable-model-invocation: false
 
 ## 2. 关键决策（本期实测结论，别重蹈覆辙）
 
-- **保真 vs AI 分离**：AI 抽人声能削弱 BGM ~38%，但会**轻微改变音色**。本期用户选"保真版"——直接用原音源（`pod_raw.pcm`）裁剪，不做分离。→ **默认走保真**；只有 BGM 实在盖话、且用户接受音色微调时，才用分离版（见 `build_lex_v6.py` 思路）。
+- **保真 vs AI 分离**：AI 抽人声能削弱 BGM ~38%，但会**轻微改变音色**。**默认走保真**——直接用工程母带 `pod_src.wav`（即你把原始录音交给 01 预处理统一转码后的版本）裁剪，不做分离；只有 BGM 实在盖话、且你接受音色微调时，才用分离版（先跑 `02_separate_vocals.md` 抽人声，再在 06 设 `USE_SEPARATED=True`）。
 - **不用 tanh / 软压缩**：曾用 tanh 做句尾回音抑制，结果制造句尾回音 → 废弃。全程只用**乘法线性增益**，零音色改变。
 - **写盘用 `wave` 模块，不用 soundfile**：本机 soundfile 写 wav 曾损坏（重装环境后恢复）。保底一律 `wave` 模块写出 int16；soundfile 仅用于读。
 - **交叉淡化 0.03s 等功率**：`head + overlap(out[-cf:]*cos + seg[:cf]*sin) + tail`。**经典坑**：忘了拆 head 直接 `sp[:-cf1]*cos + heal[:cf1]*sin` → 广播 shape 不匹配崩溃。正确写法见 `06_cut_assemble.py` 的 `xf_append`。
@@ -58,7 +58,8 @@ PREFIX = "pod_"               # 文件名前缀，避免多期混淆
 SR = 44100
 ```
 统一约定产物名（脚本自动读写）：
-- `pod_raw.pcm` / `pod_44k_mono.wav`：源
+- `pod_src.wav`：工程母带（你给的原始录音经 01 统一转码；所有脚本后续只读它）
+- `pod_speech_44k.wav`：AI 分离版人声（可选，仅分离流程产出）
 - `pod_segments.json`：词级转写
 - `pod_cuts.json`：候选切点
 - `pod_标注稿.md` / `pod_可编辑逐字稿.md`：给用户编辑

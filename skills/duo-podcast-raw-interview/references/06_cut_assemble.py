@@ -5,7 +5,7 @@
 AGC 平滑增益统一音量 -> 接合成疗愈结尾 -> wave 模块写盘（绕开本机 soundfile 写坏）。
 
 配置（按项目改）：
-- USE_SEPARATED=False -> 用原音源 pod_raw.pcm（保真，音色100%原样）
+- USE_SEPARATED=False -> 用工程母带 pod_src.wav（用户原始录音统一转码版；保真，音色100%原样）
 - USE_SEPARATED=True  -> 用 pod_speech_44k.wav（AI 分离版，BGM 削弱但音色略变）
 - DROP：用户点名要删的句子起始秒集合
 - OPEN_LO/OPEN_HI：要提到开头当 hook 的开场段区间（不删，正文保留原位）
@@ -37,11 +37,11 @@ def sf_safe(p):
 
 
 # ---------- 1) 载入音源 ----------
+# 用户每次给的原始录音格式不固定（wav/mp3/m4a/mov/pcm），已由 01 统一转成工程母带 pod_src.wav。
 if USE_SEPARATED:
-    src, sr = sf_safe(os.path.join(DR, PREFIX + "speech_44k.wav"))
+    src, sr = sf_safe(os.path.join(DR, PREFIX + "speech_44k.wav"))   # AI 分离版（BGM 削弱，音色略变）
 else:
-    raw = np.fromfile(os.path.join(DR, PREFIX + "raw.pcm"), dtype=np.int16)
-    src = raw.astype(np.float32) / 32768.0
+    src, sr = sf_safe(os.path.join(DR, PREFIX + "src.wav"))          # 工程母带（保真，音色100%原样）
 print("音源: %.1fs 峰值 %.4f RMS %.4f" % (len(src) / SR, np.max(np.abs(src)), rms(src)))
 
 segs = json.load(open(os.path.join(DR, PREFIX + "segments.json"), encoding="utf-8"))

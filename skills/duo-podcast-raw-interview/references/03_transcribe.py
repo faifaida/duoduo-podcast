@@ -10,7 +10,7 @@ from mlx_audio.stt.generate import generate_transcription, load_model
 DR = os.environ.get("PODCAST_DIR", "/path/to/工程目录")
 PREFIX = "pod_"
 
-WAV = os.path.join(DR, PREFIX + "44k_mono.wav")   # 没有就先用 16k 版
+WAV = os.path.join(DR, PREFIX + "src.wav")          # 工程母带（01 预处理统一转码产出）
 TXT = os.path.join(DR, PREFIX + "transcript.txt")
 JSON = os.path.join(DR, PREFIX + "segments.json")
 
