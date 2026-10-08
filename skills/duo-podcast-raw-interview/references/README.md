@@ -24,6 +24,7 @@ PREFIX = "pod_"                                            # 文件名前缀，�
 | 6 | `07_healing_ending.py` | （独立生成版）`pod_疗愈结尾.wav`；06 已内联同函数，可不单独跑 |
 | 7 | `08_timeline_map.py` | 拼接顺序 → 源/成片时间映射 + Part 锚点（抄进发布文案时间轴）|
 | 8 | `09_sample_timeline.py` | 成片等间隔采样内容，辅助编排详细时间轴 |
+| 9 | `10_export_mp3.py` | `pod_成片.wav` → `pod_成片.mp3`（192k mono，ffprobe 校验时长对齐，差 >2s 删半截文件，绝不静默交付）|
 
 ## 关键坑（别重蹈）
 1. **写盘用 `wave`，不用 `soundfile`**：本期本机 soundfile 写 wav 损坏过（重装环境恢复）。读可用 soundfile，写一律 `wave` 模块 int16。

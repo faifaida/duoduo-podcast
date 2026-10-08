@@ -20,7 +20,7 @@ disable-model-invocation: false
 - 需要：去 BGM/环境噪音、去口癖和长停顿、统一全程音量、接一段疗愈结尾、出可点击时间轴与发布文案。
 - **不做** TTS voice 生成（那是 `duo-podcast-studio` 的事）。两类 skill 各管各的，不要混用。
 
-## 1. 总流程（9 步）
+## 1. 总流程（10 步）
 
 | 步 | 做的事 | 脚本 |
 |----|--------|------|
@@ -34,6 +34,7 @@ disable-model-invocation: false
 | 7 | 合成疗愈结尾（60s pad）+ 1s 交叉淡化拼接 | `references/07_healing_ending.py` |
 | 8 | 时间轴映射：源时间 → 成片时间，按关键词定位 Part 锚点 | `references/08_timeline_map.py` |
 | 9 | 发布包：文案/封面/校验 → 交给 `duoduo-podcast-release-package` | `references/09_sample_timeline.py` 辅助采样 |
+| 10 | 导出 mp3 并校验时长对齐：mp3 时长须与 wav 差 <2s，否则报错删除半截文件，绝不静默交付 | `references/10_export_mp3.py` |
 
 ## 2. 关键决策（本期实测结论，别重蹈覆辙）
 
@@ -48,6 +49,7 @@ disable-model-invocation: false
 - **绝不盲切**：只切用户逐条点名 / 标注确认的；自动检测的候选（口癖、长停顿）先列清单交确认再动手（参考 EP18 翻车：自动检测器必误删真实词）。
 - **交付前实测**：回读 RMS、每 5 分钟音量曲线、峰值、以及"某段变低"类异常点（本期 20:33）确认已拉平。不看脚本返回就报 done = 违规。
 - **保真优先**：用户要原声就走原音源路径，不为降噪牺牲音色。
+- **mp3 导出必须带时长校验（见 10_export_mp3.py）**：曾发生 ffmpeg 静默截断成片到一半（68min→32min）还误报成功——永远用 ffprobe 比对 wav/mp3 时长。
 
 ## 4. 输入文件约定（新项目改 `DR` + `PREFIX`）
 
